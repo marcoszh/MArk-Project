@@ -1,0 +1,22 @@
+frameworkVersion: ">=1.2.1"
+
+service: tensorflow-nmt
+
+provider:
+  name: aws
+  runtime: python2.7
+  stage: dev
+  region: us-east-1
+  environment:
+
+
+functions:
+  predict:
+    handler: nmt.predict
+    events:
+      - http:
+          path: /predict
+          method: post
+    memorySize: 3008 # optional, in MB, default is 1024
+    timeout: 10 # optional, in seconds, default is 6
+

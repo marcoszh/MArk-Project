@@ -1,0 +1,6 @@
+- fetch data from db once the request need allocation -> govent notification
+- send request for each type in a schedule
+- abstract the batching interface for flexible sending request
+- update nginx request *
+- add tag *
+- p2 instance and cost

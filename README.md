@@ -3,6 +3,8 @@
 
 ## Instructions
 
+You need to build your own AWS AMI that encapsulates the actual serving backend first to be able to run the experiments, the AMI must be able to be requested following the patterns in model_source.py. The easiest way to do so would be using a MXNet Model Server image.
+
 ### pre-launch instances
 - modify the instance type and model type in constants.py (INS_SOURCE, MODEL)
 - cmd : ./bin/start_server.sh launch $tag(optional,default 0)
